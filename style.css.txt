@@ -1,0 +1,229 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #160b35, #352064, #092d50);
+}
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #130d2b;
+    border-bottom: 1px solid #7653a8;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: #ff91d5;
+}
+
+.nav-text {
+    color: #c9b8ff;
+    font-size: 14px;
+}
+
+/* Hero section */
+
+.hero {
+    text-align: center;
+    padding: 70px 20px 45px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 11px 23px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #9333ea, #ec4899);
+    color: white;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #ff82d2;
+}
+
+.hero p {
+    max-width: 680px;
+    margin: auto;
+    color: #ddd2f5;
+    line-height: 1.9;
+}
+
+/* Main container */
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    padding: 25px 20px;
+}
+
+.analyzer-card {
+    width: 680px;
+    max-width: 100%;
+    padding: 38px;
+    border-radius: 24px;
+    background: #251944;
+    border: 1px solid #7953a8;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+}
+
+.card-heading {
+    margin-bottom: 28px;
+}
+
+.card-heading h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.card-heading p {
+    color: #c9bce2;
+}
+
+/* Review box */
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    color: #ffc5ed;
+    font-weight: 600;
+}
+
+textarea {
+    width: 100%;
+    height: 160px;
+    padding: 18px;
+    resize: vertical;
+    border-radius: 14px;
+    outline: none;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    background: #130d29;
+    border: 2px solid #8b5cc2;
+}
+
+textarea:focus {
+    border-color: #ff75c8;
+    box-shadow: 0 0 15px #a855f755;
+}
+
+textarea::placeholder {
+    color: #a99abd;
+}
+
+/* Analyse button */
+
+button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 17px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(90deg, #9333ea, #ec4899, #2563eb);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px #ec489966;
+}
+
+/* Result section */
+
+.result-box {
+    margin-top: 30px;
+    padding: 28px;
+    text-align: center;
+    border-radius: 18px;
+}
+
+.result-icon {
+    font-size: 50px;
+    margin-bottom: 12px;
+}
+
+.result-box h3 {
+    margin-bottom: 12px;
+}
+
+.result-box h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.result-box p {
+    font-size: 14px;
+}
+
+.positive {
+    background: #075e46;
+    border: 2px solid #34d399;
+}
+
+.negative {
+    background: #831b42;
+    border: 2px solid #fb7185;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 40px;
+    background: #130d29;
+    border-top: 1px solid #493365;
+    color: #d4c5eb;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* Mobile view */
+
+@media(max-width: 600px) {
+
+    .navbar {
+        padding: 18px;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .analyzer-card {
+        padding: 23px;
+    }
+}

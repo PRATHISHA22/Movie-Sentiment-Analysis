@@ -1,0 +1,105 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineSense - Movie Review Analysis</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🎬 CineSense</div>
+        <div class="nav-text">Movie Review Analysis</div>
+    </nav>
+
+    <section class="hero">
+
+        <div class="tag">✨ MOVIE REVIEW ANALYSIS</div>
+
+        <h1>
+            Discover the <span>Emotion</span><br>
+            Behind Every Review
+        </h1>
+
+        <p>
+            Share your thoughts about a movie and discover
+            whether the review expresses a positive or negative opinion.
+        </p>
+
+    </section>
+
+    <div class="main-container">
+
+        <div class="analyzer-card">
+
+            <div class="card-heading">
+                <h2>🎥 Analyse Your Movie Review</h2>
+                <p>Enter your thoughts about any movie below.</p>
+            </div>
+
+            <form method="POST">
+
+                <label for="review">Your Movie Review</label>
+
+                <textarea
+                    id="review"
+                    name="review"
+                    placeholder="Write your movie review here..."
+                    required>{{ review or '' }}</textarea>
+
+                <button type="submit">
+                    ✨ Analyse Review
+                </button>
+
+            </form>
+
+            {% if result %}
+
+            <div class="result-box
+            {% if 'Positive' in result %}
+                positive
+            {% else %}
+                negative
+            {% endif %}">
+
+                <div class="result-icon">
+                    {% if 'Positive' in result %}
+                        😊
+                    {% else %}
+                        😞
+                    {% endif %}
+                </div>
+
+                <h3>Your Review Result</h3>
+                <h2>{{ result }}</h2>
+
+                <p>
+                    {% if 'Positive' in result %}
+                        Your review expresses a positive opinion!
+                    {% else %}
+                        Your review expresses a negative opinion.
+                    {% endif %}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>🎬 CineSense | Movie Review Sentiment Analysis</p>
+        <p>Developed using Python and Flask</p>
+    </footer>
+
+</body>
+</html>
